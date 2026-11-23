@@ -113,6 +113,17 @@
     if (n > LAST) {
       var text = message();
       preview.textContent = text;
+      // ориентир только для «Под ключ»: площадь × цена за м²
+      var est = quiz.querySelector("[data-est]");
+      var area = parseInt(val("area"), 10);
+      if (est) {
+        var show = val("type") === M.turnkey && area > 0 && M.price_m2;
+        est.hidden = !show;
+        if (show) {
+          quiz.querySelector("[data-est-sum]").textContent = (area * M.price_m2).toLocaleString("ru-RU");
+          quiz.querySelector("[data-est-note]").textContent = M.est_note.replace("{area}", area);
+        }
+      }
       send.href = quiz.dataset.wa + "?text=" + encodeURIComponent(text);
     }
     if (focus) {

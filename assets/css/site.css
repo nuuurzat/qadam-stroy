@@ -125,6 +125,16 @@ p { margin: 0; }
 .hero { background: var(--bg-alt); padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 8vw, 104px); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 72px); align-items: end; }
 .hero h1 { margin-bottom: 22px; }
+.price, .q-est { display: inline-flex; flex-direction: column; gap: 2px; margin: 26px 0 0; padding: 12px 20px 14px 18px;
+  border-left: 4px solid var(--accent); background: var(--surface); }
+.price-l { font-family: "Geologica", sans-serif; font-variation-settings: "SHRP" 100; font-size: .8125rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.price-v { font-family: "Geologica", sans-serif; font-variation-settings: "SHRP" 100; font-weight: 800; line-height: 1.1;
+  font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.4rem); letter-spacing: -.02em; color: var(--text); }
+.price-v small { font-size: .5em; font-weight: 600; letter-spacing: 0; color: var(--muted); }
+.price-v small:first-child { margin-right: .15em; }
+.q-est { display: flex; margin: 18px 0 0; background: var(--bg-alt); }
+.q-est-note { font-size: .875rem; color: var(--muted); margin-top: 4px; }
 .stairs {
   position: relative; height: clamp(300px, 32vw, 430px); display: grid; grid-template-columns: repeat(4, 1fr);
   align-items: end; gap: 0;
