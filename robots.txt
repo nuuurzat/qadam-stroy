@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nuuurzat.github.io/qadam-stroy/sitemap.xml
